@@ -1,6 +1,6 @@
 name: flutter_algolia_places
 description: Algolia places autocomplete widgets for flutter.
-version: 0.0.1
+version: 0.0.2
 author: Raisel Melian <raisel.melian@gmail.com>
 homepage: https://github.com/rmelian/flutter_algolia_places
 maintainer: Raisel Melian (@RaiselMelian)
@@ -23,5 +23,5 @@ dev_dependencies:
 
 flutter:
   assets:
-    - packages/flutter_algolia_places/assets/google_black.png
-    - packages/flutter_algolia_places/assets/google_white.png
+    - packages/flutter_algolia_places/assets/search-by-algolia-dark-background.png
+    - packages/flutter_algolia_places/assets/search-by-algolia-light-background.png
