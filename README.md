@@ -1,4 +1,4 @@
-# flutter_google_places
+# flutter_algolia_places
 <p align="left">
   <a href="https://pub.dartlang.org/packages/flutter_google_places"><img alt="pub version" src="https://img.shields.io/pub/v/flutter_google_places.svg?style=flat-square"></a>
 </p>
@@ -26,7 +26,7 @@ For help getting started with Flutter, view our online [documentation](http://fl
 dependencies:
   flutter:
     sdk: flutter
-  flutter_google_places: <last-version>
+  flutter_algolia_places: <last-version>
 ```
 
 ```dart

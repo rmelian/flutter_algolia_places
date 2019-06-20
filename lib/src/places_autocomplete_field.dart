@@ -1,7 +1,7 @@
 import 'dart:async';
 
+import 'package:algolia_places/places.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_webservice/places.dart';
 
 import 'flutter_google_places.dart';
 
@@ -46,12 +46,12 @@ class PlacesAutocompleteField extends StatefulWidget {
     this.trailingOnTap,
     this.mode = Mode.fullscreen,
     this.offset,
-    this.location,
+//    this.location,
     this.radius,
     this.language,
     this.sessionToken,
     this.types,
-    this.components,
+//    this.components,
     this.strictbounds,
     this.onChanged,
     this.onError,
@@ -116,9 +116,9 @@ class PlacesAutocompleteField extends StatefulWidget {
 
   final List<String> types;
 
-  final List<Component> components;
+//  final List<Component> components;
 
-  final Location location;
+//  final Location location;
 
   final num radius;
 
@@ -155,7 +155,7 @@ class _LocationAutocompleteFieldState extends State<PlacesAutocompleteField> {
       _controller = null;
   }
 
-  Future<Prediction> _showAutocomplete() async => PlacesAutocomplete.show(
+  Future<Hit> _showAutocomplete() async => PlacesAutocomplete.show(
         context: context,
         apiKey: widget.apiKey,
         offset: widget.offset,
@@ -164,22 +164,22 @@ class _LocationAutocompleteFieldState extends State<PlacesAutocompleteField> {
         hint: widget.hint,
         language: widget.language,
         sessionToken: widget.sessionToken,
-        components: widget.components,
-        location: widget.location,
+//        components: widget.components,
+//        location: widget.location,
         radius: widget.radius,
         types: widget.types,
         strictbounds: widget.strictbounds,
       );
 
   void _handleTap() async {
-    Prediction p = await _showAutocomplete();
+    Hit p = await _showAutocomplete();
 
     if (p == null) return;
 
     setState(() {
-      _effectiveController.text = p.description;
+      _effectiveController.text = p.suggestion.description;
       if (widget.onChanged != null) {
-        widget.onChanged(p.description);
+        widget.onChanged(p.suggestion.description);
       }
     });
   }

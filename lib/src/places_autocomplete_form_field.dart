@@ -1,5 +1,5 @@
+import 'package:algolia_places/places.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_webservice/places.dart';
 
 import 'flutter_google_places.dart';
 import 'places_autocomplete_field.dart';
@@ -53,12 +53,12 @@ class PlacesAutocompleteFormField extends FormField<String> {
     VoidCallback trailingOnTap,
     Mode mode = Mode.fullscreen,
     num offset,
-    Location location,
+//    Location location,
     num radius,
     String language,
     String sessionToken,
     List<String> types,
-    List<Component> components,
+//    List<Component> components,
     bool strictbounds,
     ValueChanged<PlacesAutocompleteResponse> onError,
     InputDecoration inputDecoration = const InputDecoration(),
@@ -88,9 +88,9 @@ class PlacesAutocompleteFormField extends FormField<String> {
               offset: offset,
               trailingOnTap: trailingOnTap,
               hint: hint,
-              location: location,
+//              location: location,
               radius: radius,
-              components: components,
+//              components: components,
               language: language,
               sessionToken: sessionToken,
               types: types,
